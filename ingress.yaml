@@ -1,0 +1,11 @@
+apiVersion: projectcontour.io/v1
+kind: HTTPProxy
+metadata:
+  name: podinfo-ingress
+spec:
+  virtualhost:
+    fqdn: podinfo.35.231.180.96.nip.io
+  includes:
+    - name: podinfo
+      conditions:
+        - prefix: /

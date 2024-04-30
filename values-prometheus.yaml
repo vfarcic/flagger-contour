@@ -1,0 +1,8 @@
+prometheus:
+  ingress:
+    enabled: true
+    ingressClassName: contour
+    hosts:
+      - prometheus.35.231.180.96.nip.io
+  prometheusSpec:
+    serviceMonitorSelectorNilUsesHelmValues: false
